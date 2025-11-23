@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Método Vital - Salud Integral</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Open+Sans:wght@400;600&display=swap');
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+        h1, h2, h3, h4, .font-heading {
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .hero-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1544367563-12123d8965cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Estilos para las preguntas frecuentes */
+        details > summary {
+            list-style: none;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+        details[open] summary ~ * {
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(-10px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <!-- Logo actualizado -->
+                    <img src="1000096034.jpg" alt="Logo Salud Integral" class="h-12 w-auto rounded-full mr-3 border border-emerald-100">
+                    <span class="text-emerald-600 text-xl md:text-2xl font-bold font-heading">Salud Integral</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#metodo" class="text-gray-600 hover:text-emerald-600 font-medium">El Método</a>
+                    <a href="#beneficios" class="text-gray-600 hover:text-emerald-600 font-medium">¿Qué incluye?</a>
+                    <a href="#faq" class="text-gray-600 hover:text-emerald-600 font-medium">Preguntas</a>
+                    <a href="https://pay.hotmart.com/S102735507L" target="_blank" class="bg-emerald-600 text-white px-5 py-2 rounded-full font-bold hover:bg-emerald-700 transition duration-300 transform hover:scale-105">Empezar Cambio</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-emerald-600 focus:outline-none p-2">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t shadow-lg">
+            <a href="#metodo" class="block px-6 py-3 text-gray-600 hover:bg-emerald-50 border-b border-gray-100">El Método</a>
+            <a href="#beneficios" class="block px-6 py-3 text-gray-600 hover:bg-emerald-50 border-b border-gray-100">¿Qué incluye?</a>
+            <a href="#faq" class="block px-6 py-3 text-gray-600 hover:bg-emerald-50 border-b border-gray-100">Preguntas</a>
+            <a href="https://pay.hotmart.com/S102735507L" target="_blank" class="block px-6 py-4 text-emerald-600 font-bold bg-emerald-50 hover:bg-emerald-100">¡Quiero empezar ya!</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-bg min-h-screen flex items-center justify-center text-white pt-24 pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="text-center md:text-left order-2 md:order-1">
+                <span class="bg-emerald-500 text-white px-3 py-1 rounded-full text-sm font-semibold mb-4 inline-block tracking-wide uppercase animate-pulse">Ebook Exclusivo</span>
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">Transforma tu vida con el <span class="text-emerald-400">Método Vital</span></h1>
+                <p class="text-xl md:text-2xl mb-8 text-gray-200 font-light">La guía definitiva de 50 páginas que une Nutrición, Entrenamiento y Equilibrio mental en un solo sistema.</p>
+                <div class="flex flex-col md:flex-row gap-4 justify-center md:justify-start">
+                    <a href="https://pay.hotmart.com/S102735507L" target="_blank" class="bg-emerald-500 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-emerald-600 transition duration-300 shadow-lg text-center transform hover:-translate-y-1">
+                        Quiero empezar mi cambio ya <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <p class="mt-4 text-sm text-gray-300 text-center md:text-left"><i class="fas fa-check-circle text-emerald-400 mr-1"></i> Descarga inmediata</p>
+            </div>
+            
+            <!-- Imagen de Presentación (Mini Presentación) -->
+            <div class="order-1 md:order-2 flex justify-center relative">
+                <div class="relative w-full max-w-md group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-emerald-600 to-teal-600 rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
+                    <img src="1000104154.png" alt="Presentación Método Vital" class="relative w-full rounded-lg shadow-2xl transform transition duration-500 hover:scale-[1.02] border-4 border-white/10">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Pain Points (El Problema) -->
+    <section class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-12">¿Te sientes identificado?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-6 rounded-xl bg-red-50 border border-red-100 hover:shadow-md transition hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4 text-red-500 text-2xl">
+                        <i class="fas fa-battery-quarter"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">Agotamiento</h3>
+                    <p class="text-gray-600 text-sm">Cansancio constante que no se va durmiendo.</p>
+                </div>
+                <div class="p-6 rounded-xl bg-orange-50 border border-orange-100 hover:shadow-md transition hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4 text-orange-500 text-2xl">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">Efecto Rebote</h3>
+                    <p class="text-gray-600 text-sm">Dietas que empiezan el lunes y terminan el jueves.</p>
+                </div>
+                <div class="p-6 rounded-xl bg-blue-50 border border-blue-100 hover:shadow-md transition hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 text-blue-500 text-2xl">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">Estrés</h3>
+                    <p class="text-gray-600 text-sm">Ansiedad que sabotea tus intentos de cuidarte.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Solution (Los 3 Pilares) -->
+    <section id="metodo" class="py-20 bg-gray-50 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Ingeniería Humana aplicada a tu vida</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">"Método Vital" unifica los tres pilares esenciales para una salud real:</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Pilar 1 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-2xl transition duration-300">
+                    <div class="h-48 bg-cover bg-center group-hover:scale-105 transition duration-700" style="background-image: url('https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                    <div class="p-8 relative">
+                        <div class="absolute -top-6 right-6 bg-emerald-500 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold shadow-lg">1</div>
+                        <h3 class="text-xl font-bold text-black mb-2">Nutrición Consciente</h3>
+                        <p class="text-gray-500 text-sm">Aprende a alimentar tu cuerpo para obtener energía y salud, sin restricciones absurdas.</p>
+                    </div>
+                </div>
+
+                <!-- Pilar 2 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-2xl transition duration-300">
+                    <div class="h-48 bg-cover bg-center group-hover:scale-105 transition duration-700" style="background-image: url('https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                    <div class="p-8 relative">
+                        <div class="absolute -top-6 right-6 bg-blue-500 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold shadow-lg">2</div>
+                        <h3 class="text-xl font-bold text-black mb-2">Entrenamiento Vital</h3>
+                        <p class="text-gray-500 text-sm">Movimiento funcional que fortalece y protege tu cuerpo, adaptado a tu nivel.</p>
+                    </div>
+                </div>
+
+                <!-- Pilar 3 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-2xl transition duration-300">
+                    <div class="h-48 bg-cover bg-center group-hover:scale-105 transition duration-700" style="background-image: url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');"></div>
+                    <div class="p-8 relative">
+                        <div class="absolute -top-6 right-6 bg-purple-500 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold shadow-lg">3</div>
+                        <h3 class="text-xl font-bold text-black mb-2">Equilibrio Mental</h3>
+                        <p class="text-gray-500 text-sm">Técnicas de mindset y gestión del estrés para mantener la constancia y la paz.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's Included Update -->
+    <section id="beneficios" class="py-20 bg-emerald-900 text-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold">Contenido Directo y Práctico</h2>
+                <p class="mt-4 text-emerald-200">Sin relleno. Solo lo que necesitas saber.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <ul class="space-y-8">
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 h-8 w-8 rounded-full bg-emerald-500 flex items-center justify-center mt-1 shadow-lg">
+                                <i class="fas fa-book-open text-sm text-white"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-xl font-bold">Ebook "Método Vital"</h4>
+                                <p class="text-emerald-200 mt-1">50 páginas de contenido de alto valor, diseñadas para leerse y aplicarse de inmediato.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 h-8 w-8 rounded-full bg-emerald-500 flex items-center justify-center mt-1 shadow-lg">
+                                <i class="fas fa-mobile-alt text-sm text-white"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-xl font-bold">Formato Multi-Dispositivo</h4>
+                                <p class="text-emerald-200 mt-1">PDF optimizado para leer cómodamente en tu celular, tablet o computadora.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 h-8 w-8 rounded-full bg-emerald-500 flex items-center justify-center mt-1 shadow-lg">
+                                <i class="fas fa-infinity text-sm text-white"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-xl font-bold">Acceso de por vida</h4>
+                                <p class="text-emerald-200 mt-1">Descárgalo una vez y es tuyo para siempre. Sin suscripciones mensuales.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white/10 p-8 rounded-2xl backdrop-blur-md border border-white/20 shadow-xl">
+                    <h3 class="text-2xl font-bold mb-6 text-center border-b border-white/20 pb-4">¿Por qué este ebook?</h3>
+                    <div class="space-y-4">
+                         <div class="flex items-center bg-emerald-800/50 p-3 rounded-lg">
+                             <i class="fas fa-star text-yellow-400 mr-4 text-xl"></i>
+                             <span class="font-medium">Explicaciones sencillas sin jerga médica</span>
+                         </div>
+                         <div class="flex items-center bg-emerald-800/50 p-3 rounded-lg">
+                             <i class="fas fa-star text-yellow-400 mr-4 text-xl"></i>
+                             <span class="font-medium">Enfoque realista para gente ocupada</span>
+                         </div>
+                         <div class="flex items-center bg-emerald-800/50 p-3 rounded-lg">
+                             <i class="fas fa-star text-yellow-400 mr-4 text-xl"></i>
+                             <span class="font-medium">Estrategias sostenibles a largo plazo</span>
+                         </div>
+                    </div>
+                    <div class="mt-8 text-center">
+                         <p class="text-sm text-emerald-300 italic">"No necesitas leer 300 páginas para empezar a cambiar tu vida hoy."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-white">
+        <div class="max-w-3xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Preguntas Frecuentes</h2>
+            <div class="space-y-4">
+                <!-- Pregunta 1 -->
+                <details class="bg-gray-50 rounded-lg p-4 border border-gray-200 cursor-pointer group">
+                    <summary class="flex justify-between items-center font-bold text-lg text-gray-700 group-hover:text-emerald-600 transition">
+                        <span>¿El libro es físico o digital?</span>
+                        <span class="text-emerald-500 transition-transform group-open:rotate-180"><i class="fas fa-chevron-down"></i></span>
+                    </summary>
+                    <div class="mt-3 text-gray-600 pl-2 border-l-4 border-emerald-400">
+                        Es un producto 100% digital (Ebook en formato PDF). Esto significa que lo recibirás en tu correo electrónico inmediatamente después de la compra y podrás leerlo en tu celular, tablet o computadora sin esperar envíos.
+                    </div>
+                </details>
+
+                <!-- Pregunta 2 -->
+                <details class="bg-gray-50 rounded-lg p-4 border border-gray-200 cursor-pointer group">
+                    <summary class="flex justify-between items-center font-bold text-lg text-gray-700 group-hover:text-emerald-600 transition">
+                        <span>¿Es apto para principiantes?</span>
+                        <span class="text-emerald-500 transition-transform group-open:rotate-180"><i class="fas fa-chevron-down"></i></span>
+                    </summary>
+                    <div class="mt-3 text-gray-600 pl-2 border-l-4 border-emerald-400">
+                        ¡Totalmente! El Método Vital está diseñado para explicar conceptos complejos de salud de forma sencilla y paso a paso. No necesitas conocimientos previos de nutrición o entrenamiento.
+                    </div>
+                </details>
+
+                <!-- Pregunta 3 -->
+                <details class="bg-gray-50 rounded-lg p-4 border border-gray-200 cursor-pointer group">
+                    <summary class="flex justify-between items-center font-bold text-lg text-gray-700 group-hover:text-emerald-600 transition">
+                        <span>¿Cómo funciona la garantía?</span>
+                        <span class="text-emerald-500 transition-transform group-open:rotate-180"><i class="fas fa-chevron-down"></i></span>
+                    </summary>
+                    <div class="mt-3 text-gray-600 pl-2 border-l-4 border-emerald-400">
+                        Tu compra está protegida por la garantía de satisfacción de Hotmart. Si por alguna razón sientes que el contenido no es para ti, puedes solicitar la devolución de tu dinero dentro del plazo establecido por la plataforma.
+                    </div>
+                </details>
+
+                <!-- Pregunta 4 -->
+                <details class="bg-gray-50 rounded-lg p-4 border border-gray-200 cursor-pointer group">
+                    <summary class="flex justify-between items-center font-bold text-lg text-gray-700 group-hover:text-emerald-600 transition">
+                        <span>¿Qué métodos de pago aceptan?</span>
+                        <span class="text-emerald-500 transition-transform group-open:rotate-180"><i class="fas fa-chevron-down"></i></span>
+                    </summary>
+                    <div class="mt-3 text-gray-600 pl-2 border-l-4 border-emerald-400">
+                        Procesamos los pagos a través de Hotmart, la plataforma más segura de Latinoamérica. Aceptan tarjetas de crédito, débito, PayPal y métodos de pago en efectivo locales según tu país.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing / CTA -->
+    <section id="comprar" class="py-20 bg-gray-50">
+        <div class="max-w-3xl mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-8">Invierte en tu bienestar hoy</h2>
+            
+            <div class="bg-white rounded-2xl shadow-2xl overflow-hidden border-t-8 border-emerald-500 transform transition hover:scale-105 duration-300">
+                <div class="p-8 md:p-12">
+                    <span class="text-gray-500 uppercase font-bold tracking-wider text-sm bg-gray-100 px-3 py-1 rounded-full">Oferta Especial</span>
+                    <div class="flex justify-center items-baseline my-6">
+                        <span class="text-5xl font-extrabold text-gray-800">$11.99</span>
+                        <span class="text-2xl text-gray-400 ml-3 line-through font-normal">$24.99</span>
+                    </div>
+                    <p class="text-gray-600 mb-8 px-4">Obtén acceso inmediato a la guía que simplificará tu camino hacia una vida saludable.</p>
+                    
+                    <!-- Botón Actualizado -->
+                    <a href="https://pay.hotmart.com/S102735507L" target="_blank" class="w-full bg-emerald-600 text-white font-bold text-xl py-5 rounded-lg hover:bg-emerald-700 transition duration-300 shadow-lg flex justify-center items-center gap-3 group">
+                        Quiero empezar mi cambio ya <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                    
+                    <div class="mt-6 flex flex-col items-center justify-center gap-2 text-xs text-gray-400">
+                         <div class="flex items-center gap-1">
+                            <i class="fas fa-shield-alt text-green-500"></i> <span>Compra 100% Segura</span>
+                         </div>
+                         <div class="flex items-center gap-1">
+                            <i class="fas fa-envelope"></i> <span>Entrega Inmediata por Email</span>
+                         </div>
+                    </div>
+                </div>
+                <div class="bg-gray-100 px-8 py-4 flex justify-center gap-6 text-gray-400 text-2xl border-t border-gray-200">
+                    <i class="fab fa-cc-visa hover:text-blue-800 transition" title="Visa"></i>
+                    <i class="fab fa-cc-mastercard hover:text-red-600 transition" title="Mastercard"></i>
+                    <i class="fab fa-cc-amex hover:text-blue-500 transition" title="Amex"></i>
+                    <i class="fab fa-paypal hover:text-blue-700 transition" title="PayPal"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center mb-4">
+                         <img src="1000096034.jpg" alt="Logo Mini" class="h-8 w-8 rounded-full mr-2 grayscale opacity-70">
+                         <h3 class="text-white text-lg font-bold">Salud Integral</h3>
+                    </div>
+                    <p class="text-sm leading-relaxed">
+                        Nuestro compromiso es brindarte herramientas reales y aplicables para mejorar tu calidad de vida a través de la nutrición, el movimiento y la mente.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">Accesos Rápidos</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#metodo" class="hover:text-emerald-400 transition">El Método</a></li>
+                        <li><a href="#beneficios" class="hover:text-emerald-400 transition">Qué incluye</a></li>
+                        <li><a href="https://pay.hotmart.com/S102735507L" class="hover:text-emerald-400 transition">Comprar Ahora</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">Síguenos</h3>
+                    <div class="flex space-x-6">
+                        <!-- Links Actualizados -->
+                        <a href="https://www.instagram.com/_salud_integrall?igsh=OWZyMTVteml2dHJ2" target="_blank" class="text-2xl hover:text-pink-500 transition transform hover:scale-110" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com/share/17NspHndtg/" target="_blank" class="text-2xl hover:text-blue-500 transition transform hover:scale-110" title="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@salud.integrall?_r=1&_t=ZS-91cNID0yqud" target="_blank" class="text-2xl hover:text-black transition transform hover:scale-110 bg-gray-200 text-black rounded-md w-8 h-8 flex items-center justify-center" title="TikTok">
+                            <i class="fab fa-tiktok text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs">
+                <div class="mb-4 md:mb-0">
+                    &copy; 2023 Salud Integral. Todos los derechos reservados.
+                </div>
+                <div class="flex space-x-4">
+                    <span class="hover:text-white cursor-pointer">Privacidad</span>
+                    <span class="hover:text-white cursor-pointer">Términos</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement){
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    // Close mobile menu if open
+                    if(!menu.classList.contains('hidden')) {
+                        menu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
+
